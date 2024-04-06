@@ -1,0 +1,42 @@
+body{
+   padding: 0;
+   margin: 0;
+   background-color: black;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+nav li{
+    display: inline-block;
+}
+nav a{
+    text-decoration: none;
+    position: relative;
+    color: inherit;
+    width:100px;
+    display: block;
+    padding:25px 20px;
+    text-transform: uppercase;
+    font-weight: 150;
+    text-align: center;
+    color: white;
+}
+a::after {
+    content: ''; /* Add content for pseudo-element */
+    display: block; /* Make pseudo-element a block-level element */
+    position: absolute; /* Position pseudo-element absolutely */
+ /*  bottom: -2px; /* Adjust position to match text */
+   right: 22px; /* Align pseudo-element with parent */
+    width: 60%; /* Full width of parent */
+    height: 2px; /* Set height of underline */
+
+    background-color: transparent; /* Set initial color of underline */
+    transition: background-color 0.3s ease; /* Add transition for color change */
+}
+
+a:hover::after {
+    background-color: purple; /* Change color of underline on hover */
+}
